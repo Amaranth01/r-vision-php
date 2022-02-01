@@ -10,17 +10,16 @@
         if ($username === $login && $password === $passwd) {
             $_SESSION['connected'] = true;
             $_SESSION['username'] = $username;
-            header('Location: /../pages/moderation.php');
+            header('Location: /chapter/index.php');
         } else {
             echo "Nom d'utilisateur ou mot de passe invalide";
         }
     }
 ?>
 
-
 <h1>Mon site de révision</h1>
 
-<form action="/chapter/index.php" method="post">
+<form action="/index.php" method="post">
 
     <label for="username">Prénom</label>
     <input type="text" name="username" id="username">
